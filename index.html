@@ -1,10 +1,71 @@
 <!DOCTYPE html>
   <head>
+    
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Boise Code Club</title>
+    <title>Random Site...</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script >
+
+    var currentImage = 0;
+    var images = [
+    "img/dragon.png",
+    "img/codinginertia_logo.svg",
+    "img/mealticket.png",
+    "img/RetroLux.png",
+    "img/customated-wordmark.jpg",
+    "img/LocateExpress.png",
+    "img/Synoptek.png",
+    "img/pie.png",
+    ];
+
+
+
+
+
+    var currentColor = "blue";
+
+    	$(document).ready(function(){
+
+    		setInterval(changeImage, 1000)
+    		
+    	})
+    function seizure(){
+var SeizureWanted = confirm("Are you sure you want a seizure?")
+if (SeizureWanted){
+setInterval(changeColor, 5)	
+}
+else {alert('No seizures for you!')}
+
+
+    }
+    	function changeColor(){
+    			
+    			if(currentColor == "blue"){
+    				currentColor = "white";
+    			}
+    			else{
+    				currentColor = "blue";
+    			}
+    			$("body").css("background", currentColor)
+    		}
+
+    	function changeImage(){
+
+    		
+    		$("img").attr("src",images[currentImage])
+    		currentImage=currentImage+1	
+    	}
+    </script>
   </head>
   <body>
-    <h1>Boise Code Club</h1>
+    <h1>Welcome To Boise Code Club!!</h1>
+    <button onClick="seizure()">Click for seizure!</button>
+    <img src="img/Boise-Code-Club-logo.png" ></img>
+    <p>
+    		i like pie  
+    </p>
   </body>
 </html>
